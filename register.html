@@ -35,7 +35,7 @@
             display: block;
             margin-bottom: 5px;
         }
-        .form-group input, .form-group textarea {
+        .form-group input, .form-group textarea, .form-group select {
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
@@ -103,6 +103,17 @@
             <div class="form-group">
                 <label for="confirm-password">Confirm Password</label>
                 <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <div class="form-group">
+                <label for="plan">Select Your Plan</label>
+                <select id="plan" name="plan" required>
+                    <option value="free">Free Plan</option>
+                    <option value="pro">Pro Plan</option>
+                    <option value="premium">Premium Plan</option>
+                </select>
+                <div class="link" style="margin-top: 5px;">
+                    <a href="pricing.html" target="_blank">Learn more about our plans</a>
+                </div>
             </div>
             <div class="form-group">
                 <button type="submit">Register</button>
