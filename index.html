@@ -277,8 +277,17 @@
             .testimonial-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
+            .testimonial-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
             .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .testimonial-grid {
                 grid-template-columns: repeat(4, 1fr);
             }
         }
@@ -287,7 +296,7 @@
 <body>
     <header>
         <nav class="container">
-            <div class="logo">DataTutor</div>
+            <div href="#home" class="logo">DataTutor</div>
             <div class="nav-links">
                 <a href="#home">Home</a>
                 <a href="#features">Features</a>
@@ -377,6 +386,16 @@
                         <div class="stars">★★★★★</div>
                         <p>I love how the platform adapts to my progress. The certifications have been a great addition to my resume.</p>
                         <strong>Michael R.</strong>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>The structured approach to learning data analysis tools has been invaluable. I've seen a significant improvement in my skills!</p>
+                        <strong>Emily W.</strong>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>DataTutor's certification program gave me the confidence to apply for higher-level positions. It's been a game-changer for my career.</p>
+                        <strong>David K.</strong>
                     </div>
                 </div>
             </div>
