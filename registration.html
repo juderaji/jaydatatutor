@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
+    <title>DataTutor - Registration</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            background-color: #f3f4f6;
+            color: #333;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -17,12 +18,13 @@
         }
         .registration-form {
             background: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
             width: 400px;
         }
         .registration-form h2 {
+            color: #2563eb;
             margin-bottom: 20px;
             text-align: center;
         }
@@ -37,26 +39,38 @@
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 5px;
         }
         .form-group button {
             width: 100%;
             padding: 10px;
-            background-color: #007bff;
+            background-color: #2563eb;
             border: none;
             color: white;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
+            transition: background-color 0.3s;
         }
         .form-group button:hover {
-            background-color: #0056b3;
+            background-color: #1e3a8a;
+        }
+        .link {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .link a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        .link a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="registration-form">
-        <h2>Register</h2>
+        <h2>Join DataTutor</h2>
         <form action="#" method="post">
             <div class="form-group">
                 <label for="fullname">Full Name</label>
@@ -78,6 +92,9 @@
                 <button type="submit">Register</button>
             </div>
         </form>
+        <div class="link">
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </div>
     </div>
 </body>
 </html>
