@@ -14,7 +14,7 @@
             margin: 0;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             background: #ffffff;
             padding: 30px;
@@ -24,18 +24,22 @@
         .pricing-header {
             color: #2563eb;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
+        }
+        .pricing-table {
+            display: flex;
+            gap: 20px;
         }
         .plan {
+            flex: 1;
             border: 1px solid #e5e7eb;
             border-radius: 10px;
             padding: 20px;
-            margin-bottom: 20px;
             background-color: #f9fafb;
         }
         .plan h3 {
             color: #1e40af;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
         .plan ul {
             list-style-type: none;
@@ -61,37 +65,44 @@
 </head>
 <body>
     <div class="container">
-        <h2 class="pricing-header">Our Pricing Plans</h2>
-        
-        <div class="plan">
-            <h3>Free Plan</h3>
-            <ul>
-                <li>Access to basic courses</li>
-                <li>Community support</li>
-                <li>Limited course content</li>
-            </ul>
-            <a href="register.html" class="btn">Join for Free</a>
-        </div>
+        <h2 class="pricing-header">Compare Our Pricing Plans</h2>
+        <div class="pricing-table">
+            <div class="plan">
+                <h3>Free Plan</h3>
+                <ul>
+                    <li>Access to basic courses</li>
+                    <li>Community support</li>
+                    <li>Limited course content</li>
+                    <li>No certification</li>
+                    <li>Basic learning materials</li>
+                </ul>
+                <a href="register.html" class="btn">Join for Free</a>
+            </div>
 
-        <div class="plan">
-            <h3>Pro Plan</h3>
-            <ul>
-                <li>Access to all courses</li>
-                <li>Personalized learning path</li>
-                <li>Weekly progress reports</li>
-            </ul>
-            <a href="register.html" class="btn">Subscribe to Pro</a>
-        </div>
+            <div class="plan">
+                <h3>Pro Plan</h3>
+                <ul>
+                    <li>Access to all courses</li>
+                    <li>Personalized learning path</li>
+                    <li>Weekly progress reports</li>
+                    <li>Certification upon course completion</li>
+                    <li>Access to advanced learning materials</li>
+                </ul>
+                <a href="register.html" class="btn">Subscribe to Pro</a>
+            </div>
 
-        <div class="plan">
-            <h3>Premium Plan</h3>
-            <ul>
-                <li>All Pro Plan features</li>
-                <li>1-on-1 mentorship sessions</li>
-                <li>Certification for all completed courses</li>
-                <li>Priority support</li>
-            </ul>
-            <a href="register.html" class="btn">Go Premium</a>
+            <div class="plan">
+                <h3>Premium Plan</h3>
+                <ul>
+                    <li>All Pro Plan features</li>
+                    <li>1-on-1 mentorship sessions</li>
+                    <li>Certification for all completed courses</li>
+                    <li>Priority support</li>
+                    <li>Exclusive webinars and workshops</li>
+                    <li>Career guidance and resume review</li>
+                </ul>
+                <a href="register.html" class="btn">Go Premium</a>
+            </div>
         </div>
     </div>
 </body>
