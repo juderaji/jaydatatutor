@@ -171,6 +171,46 @@
             margin-bottom: 0.5rem;
         }
 
+        /* Pricing section styles */
+        .pricing {
+            padding: 4rem 0;
+            background-color: #f9fafb;
+        }
+
+        .pricing h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .pricing-card {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .price-details {
+            margin-bottom: 1.5rem;
+        }
+
         /* Testimonials section styles */
         .testimonials {
             padding: 4rem 0;
@@ -274,9 +314,7 @@
             }
 
             .feature-grid,
-            .testimonial-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
+            .pricing-grid,
             .testimonial-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -287,6 +325,7 @@
         }
 
         @media (min-width: 1024px) {
+            .pricing-grid,
             .testimonial-grid {
                 grid-template-columns: repeat(4, 1fr);
             }
@@ -373,19 +412,84 @@
             </div>
         </section>
 
+        <section class="pricing" id="pricing">
+            <div class="container">
+                <h2>Pricing Plans</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>Excel Mastery</h3>
+                        <div class="price">$299</div>
+                        <div class="price-details">
+                            <p>or $59/month for 6 months</p>
+                        </div>
+                        <ul>
+                            <li>Comprehensive Excel course</li>
+                            <li>Hands-on projects</li>
+                            <li>Personalized learning path</li>
+                            <li>Excel certification</li>
+                        </ul>
+                        <a href="#" class="btn">Enroll Now</a>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>MS SQL Pro</h3>
+                        <div class="price">$399</div>
+                        <div class="price-details">
+                            <p>or $79/month for 6 months</p>
+                        </div>
+                        <ul>
+                            <li>In-depth MS SQL course</li>
+                            <li>Real-world database projects</li>
+                            <li>Customized learning experience</li>
+                            <li>MS SQL certification</li>
+                        </ul>
+                        <a href="#" class="btn">Enroll Now</a>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>Power BI Visualizer</h3>
+                        <div class="price">$349</div>
+                        <div class="price-details">
+                            <p>or $69/month for 6 months</p>
+                        </div>
+                        <ul>
+                            <li>Comprehensive Power BI course</li>
+                            <li>Data visualization projects</li>
+                            <li>Adaptive learning path</li>
+                            <li>Power BI certification</li>
+                        </ul>
+                        <a href="#" class="btn">Enroll Now</a>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>Python Data Scientist</h3>
+                        <div class="price">$499</div>
+                        <div class="price-details">
+                            <p>or $99/month for 6 months</p>
+                        </div>
+                        <ul>
+                            <li>Extensive Python for data science course</li>
+                            <li>Advanced data analysis projects</li>
+                            <li>Personalized curriculum</li>
+                            <li>Python Data Science certification</li>
+                        </ul>
+                        <a href="#" class="btn">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="testimonials">
             <div class="container">
                 <h2>What Our Students Say</h2>
                 <div class="testimonial-grid">
                     <div class="testimonial-card">
                         <div class="stars">★★★★★</div>
-                        <p>DataTutor helped me transition into a data analyst role. The personalized learning path was incredibly effective!</p>
+                        <p>DataTutor helped me transition into a data analyst role. 
+                        The personalized learning path was incredibly effective!</p>
                         <strong>Sarah L.</strong>
                     </div>
                     <div class="testimonial-card">
                         <div class="stars">★★★★★</div>
                         <p>I love how the platform adapts to my progress. The certifications have been a great addition to my resume.</p>
-                        <strong>Michael R.</strong>
+                        <strong>James R.</strong>
                     </div>
                     <div class="testimonial-card">
                         <div class="stars">★★★★★</div>
@@ -395,7 +499,7 @@
                     <div class="testimonial-card">
                         <div class="stars">★★★★★</div>
                         <p>DataTutor's certification program gave me the confidence to apply for higher-level positions. It's been a game-changer for my career.</p>
-                        <strong>David K.</strong>
+                        <strong>Jerry K.</strong>
                     </div>
                 </div>
             </div>
@@ -435,15 +539,15 @@
                         <li><a href="#">Terms of Service</a></li>
                     </ul>
                 </div>
-                <div class="footer-column">
+                <div class="footer-column" id="contact">
                     <h3>Connect</h3>
                     <ul>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Instagram</a></li>
+                        <li><a href="https://x.com/juderaji_">Twitter</a></li>
+                        <li><a href="https://linkedin.com/in/jude-raji">LinkedIn</a></li>
+                        <li><a href="https://www.github.com/juderaji">GitHub</a></li>
+                        <li><a href="https://juderaji.medium.com">Medium</a></li>
                     </ul>
-                </div>
+                  </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2023 DataTutor. All rights reserved.</p>
