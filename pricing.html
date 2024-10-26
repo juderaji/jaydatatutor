@@ -10,12 +10,66 @@
             font-family: Arial, sans-serif;
             background-color: #f3f4f6;
             color: #333;
-            padding: 20px;
             margin: 0;
+        }
+        header {
+            background-color: #2563eb;
+            padding: 1rem 0;
+            color: white;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 1rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        nav .logo {
+            font-size: 1.5rem;
+            color: #2563eb;
+            font-weight: bold;
+        }
+        nav .nav-links a {
+            color: #4b5563;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        nav .nav-links a:hover {
+            color: #2563eb;
+        }
+        .hero {
+            background-color: #2563eb;
+            color: #fff;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+        .btn-hero {
+            background-color: #fff;
+            color: #2563eb;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .btn-hero:hover {
+            background-color: #e5e7eb;
         }
         .container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 40px auto;
             background: #ffffff;
             padding: 30px;
             border-radius: 10px;
@@ -31,7 +85,7 @@
             gap: 20px;
         }
         .plan {
-            flex: 1; width: 20%;
+            flex: 1;
             border: 1px solid #e5e7eb;
             border-radius: 10px;
             padding: 30px;
@@ -49,7 +103,8 @@
             margin-bottom: 20px;
         }
         .plan ul {
-            list-style-type: disc; margin-left: 20px;
+            list-style-type: disc;
+            margin-left: 20px;
             padding-left: 0;
             text-align: left;
             margin-bottom: 30px;
@@ -80,6 +135,23 @@
     </style>
 </head>
 <body>
+    <nav>
+        <div class="logo">DataTutor</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#features">Features</a>
+            <a href="#courses">Courses</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="container">
+            <h1>Master Data Analysis with Personalized Learning</h1>
+            <p>From beginner to expert: Excel, MS SQL, Power BI, and Python</p>
+            <a href="register.html" class="btn-hero">Start Your Journey</a>
+        </div>
+    </header>
     <div class="container">
         <h2 class="pricing-header">Compare Our Pricing Plans</h2>
         <div class="pricing-table">
@@ -87,12 +159,12 @@
                 <h3>Free Plan</h3>
                 <div class="price">$0.00</div>
                 <ul>
-                <li>Access to basic courses</li>
-                <li>Community support</li>
-                <li>Limited course content</li>
-                <li>Access to 3 sample datasets</li>
-                <li>Access to 3 dashboard templates</li>
-                            </ul>
+                    <li>Access to basic courses</li>
+                    <li>Community support</li>
+                    <li>Limited course content</li>
+                    <li>Access to sample datasets</li>
+                    <li>Access to dashboard templates</li>
+                </ul>
             </div>
 
             <div class="plan">
@@ -104,7 +176,7 @@
                     <li>Access to community support</li>
                     <li>Access to sample datasets</li>
                     <li>Access to dashboard templates</li>
-                                </ul>
+                </ul>
             </div>
 
             <div class="plan">
@@ -116,7 +188,7 @@
                     <li>Access to community support</li>
                     <li>Access to sample datasets</li>
                     <li>Access to dashboard templates</li>
-                                </ul>
+                </ul>
             </div>
 
             <div class="plan">
@@ -128,7 +200,7 @@
                     <li>Access to community support</li>
                     <li>Access to sample datasets</li>
                     <li>Access to dashboard templates</li>
-                                </ul>
+                </ul>
             </div>
 
             <div class="plan">
@@ -140,7 +212,7 @@
                     <li>Access to community support</li>
                     <li>Access to sample datasets</li>
                     <li>Access to dashboard templates</li>
-                                </ul>
+                </ul>
             </div>
         </div>
         <div class="form-group" style="text-align: center; margin-top: 20px;">
