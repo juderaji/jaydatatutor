@@ -5,51 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DataTutor - Pricing Plans</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
+        <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #f3f4f6;
+            line-height: 1.6;
             color: #333;
-            margin: 0;
+            background-color: #f3f4f6;
         }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header styles */
         header {
             background-color: #fff;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 1rem 0;
         }
+
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
             color: #2563eb;
         }
+
+        .nav-links {
+            display: none;
+        }
+
         .nav-links a {
             color: #4b5563;
             text-decoration: none;
             margin-left: 1.5rem;
         }
+
         .nav-links a:hover {
             color: #2563eb;
         }
+
+        .menu-toggle {
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Hero section styles */
         .hero {
             background-color: #2563eb;
             color: #fff;
             padding: 4rem 0;
             text-align: center;
         }
+
         .hero h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
+
         .hero p {
             font-size: 1.25rem;
             margin-bottom: 2rem;
         }
-        .btn-hero {
+
+        .btn {
+            display: inline-block;
             background-color: #fff;
             color: #2563eb;
             padding: 0.75rem 1.5rem;
@@ -58,73 +95,241 @@
             font-weight: bold;
             transition: background-color 0.3s;
         }
-        .btn-hero:hover {
+
+        .btn:hover {
             background-color: #e5e7eb;
         }
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
+
+        /* Features section styles */
+        .features {
+            padding: 4rem 0;
+        }
+
+        .features h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
-        .pricing-header {
-            color: #2563eb;
-            text-align: center;
-            margin-bottom: 40px;
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
         }
-        .pricing-table {
-            display: flex;
-            gap: 20px;
-        }
-        .plan {
-            flex: 1;
-            border: 1px solid #e5e7eb;
-            border-radius: 10px;
-            padding: 30px;
+
+        /* Learning journey section styles */
+        .learning-journey {
             background-color: #f9fafb;
-            text-align: center;
-            position: relative;
+            padding: 4rem 0;
         }
-        .plan h3 {
-            color: #1e40af;
-            margin-bottom: 20px;
-        }
-        .plan .price {
+
+        .learning-journey h2 {
             font-size: 2rem;
-            color: #e11d48;
-            margin-bottom: 20px;
-        }
-        .plan ul {
-            list-style-type: disc;
-            margin-left: 20px;
-            padding-left: 0;
-            text-align: left;
-            margin-bottom: 30px;
-        }
-        .plan ul li {
-            margin-bottom: 10px;
-        }
-        .btn {
-            display: inline-block;
-            background-color: #2563eb;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
             text-align: center;
-            transition: background-color 0.3s;
+            margin-bottom: 3rem;
         }
-        .btn:hover {
-            background-color: #1e3a8a;
+
+        .journey-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
         }
-        .plan.highlight {
-            background-color: #1e3a8a;
+
+        .step-number {
+            background-color: #2563eb;
+            color: #fff;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+
+        .step-content {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            flex-grow: 1;
+        }
+
+        .step-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Pricing section styles */
+        .pricing {
+            padding: 4rem 0;
+            background-color: #f9fafb;
+        }
+
+        .pricing h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .pricing-card {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .price-details {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Testimonials section styles */
+        .testimonials {
+            padding: 4rem 0;
+        }
+
+        .testimonials h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .stars {
+            color: #fbbf24;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card p {
+            margin-bottom: 1rem;
+        }
+
+        /* CTA section styles */
+        .cta {
+            background-color: #2563eb;
+            color: #fff;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #1f2937;
+            color: #fff;
+            padding: 3rem 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-column ul {
+            list-style-type: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-column ul li a {
+            color: #9ca3af;
+            text-decoration: none;
+        }
+
+        .footer-column ul li a:hover {
             color: #fff;
         }
-        .plan.highlight h3, .plan.highlight .price, .plan.highlight ul li {
-            color: #fff;
+
+        .footer-bottom {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            text-align: center;
+            color: #9ca3af;
+        }
+
+        /* Responsive styles */
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: none;
+            }
+
+            .feature-grid,
+            .pricing-grid,
+            .testimonial-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .pricing-grid,
+            .testimonial-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
         }
     </style>
 </head>
