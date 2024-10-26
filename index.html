@@ -3,89 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DataTutor - Master Data Analysis with Personalized Learning</title>
+    <title>DataTutor - Pricing Plans</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        /* Reset and base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
             background-color: #f3f4f6;
+            color: #333;
+            margin: 0;
         }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header styles */
         header {
             background-color: #fff;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
-
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 1rem 0;
         }
-
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
             color: #2563eb;
         }
-
-        .nav-links {
-            display: none;
-        }
-
         .nav-links a {
             color: #4b5563;
             text-decoration: none;
             margin-left: 1.5rem;
         }
-
         .nav-links a:hover {
             color: #2563eb;
         }
-
-        .menu-toggle {
-            font-size: 1.5rem;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        /* Hero section styles */
         .hero {
             background-color: #2563eb;
             color: #fff;
             padding: 4rem 0;
             text-align: center;
         }
-
         .hero h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
-
         .hero p {
             font-size: 1.25rem;
             margin-bottom: 2rem;
         }
-
-        .btn {
-            display: inline-block;
+        .btn-hero {
             background-color: #fff;
             color: #2563eb;
             padding: 0.75rem 1.5rem;
@@ -94,248 +58,80 @@
             font-weight: bold;
             transition: background-color 0.3s;
         }
-
-        .btn:hover {
+        .btn-hero:hover {
             background-color: #e5e7eb;
         }
-
-        /* Features section styles */
-        .features {
-            padding: 4rem 0;
-        }
-
-        .features h2 {
-            font-size: 2rem;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .feature-grid {
-            display: grid;
-            gap: 2rem;
-        }
-
-        .feature-card {
-            background-color: #fff;
-            padding: 1.5rem;
-            border-radius: 0.5rem;
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
-
-        .feature-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Learning journey section styles */
-        .learning-journey {
-            background-color: #f9fafb;
-            padding: 4rem 0;
-        }
-
-        .learning-journey h2 {
-            font-size: 2rem;
+        .pricing-header {
+            color: #2563eb;
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 40px;
         }
-
-        .journey-step {
+        .pricing-table {
             display: flex;
-            align-items: center;
-            margin-bottom: 2rem;
+            gap: 20px;
         }
-
-        .step-number {
-            background-color: #2563eb;
-            color: #fff;
-            width: 2.5rem;
-            height: 2.5rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            margin-right: 1rem;
-        }
-
-        .step-content {
-            background-color: #fff;
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            flex-grow: 1;
-        }
-
-        .step-content h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Pricing section styles */
-        .pricing {
-            padding: 4rem 0;
+        .plan {
+            flex: 1;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 30px;
             background-color: #f9fafb;
+            text-align: center;
+            position: relative;
         }
-
-        .pricing h2 {
+        .plan h3 {
+            color: #1e40af;
+            margin-bottom: 20px;
+        }
+        .plan .price {
             font-size: 2rem;
-            text-align: center;
-            margin-bottom: 3rem;
+            color: #e11d48;
+            margin-bottom: 20px;
         }
-
-        .pricing-grid {
-            display: grid;
-            gap: 2rem;
+        .plan ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 0;
+            text-align: left;
+            margin-bottom: 30px;
         }
-
-        .pricing-card {
-            background-color: #fff;
-            padding: 2rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            text-align: center;
+        .plan ul li {
+            margin-bottom: 10px;
         }
-
-        .pricing-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .price {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .price-details {
-            margin-bottom: 1.5rem;
-        }
-
-        /* Testimonials section styles */
-        .testimonials {
-            padding: 4rem 0;
-        }
-
-        .testimonials h2 {
-            font-size: 2rem;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .testimonial-grid {
-            display: grid;
-            gap: 2rem;
-        }
-
-        .testimonial-card {
-            background-color: #fff;
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
-
-        .stars {
-            color: #fbbf24;
-            margin-bottom: 1rem;
-        }
-
-        .testimonial-card p {
-            margin-bottom: 1rem;
-        }
-
-        /* CTA section styles */
-        .cta {
+        .btn {
+            display: inline-block;
             background-color: #2563eb;
-            color: #fff;
-            padding: 4rem 0;
-            text-align: center;
-        }
-
-        .cta h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .cta p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-        }
-
-        /* Footer styles */
-        footer {
-            background-color: #1f2937;
-            color: #fff;
-            padding: 3rem 0;
-        }
-
-        .footer-grid {
-            display: grid;
-            gap: 2rem;
-        }
-
-        .footer-column h3 {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-        }
-
-        .footer-column ul {
-            list-style-type: none;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-column ul li a {
-            color: #9ca3af;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
             text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
         }
-
-        .footer-column ul li a:hover {
+        .btn:hover {
+            background-color: #1e3a8a;
+        }
+        .plan.highlight {
+            background-color: #1e3a8a;
             color: #fff;
         }
-
-        .footer-bottom {
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid #374151;
-            text-align: center;
-            color: #9ca3af;
-        }
-
-        /* Responsive styles */
-        @media (min-width: 768px) {
-            .nav-links {
-                display: flex;
-            }
-
-            .menu-toggle {
-                display: none;
-            }
-
-            .feature-grid,
-            .pricing-grid,
-            .testimonial-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .footer-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .pricing-grid,
-            .testimonial-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
+        .plan.highlight h3, .plan.highlight .price, .plan.highlight ul li {
+            color: #fff;
         }
     </style>
 </head>
 <body>
     <header>
         <nav class="container">
-            <div href="#home" class="logo">DataTutor</div>
+            <div class="logo">DataTutor</div>
             <div class="nav-links">
                 <a href="#home">Home</a>
                 <a href="#features">Features</a>
@@ -343,224 +139,81 @@
                 <a href="#pricing">Pricing</a>
                 <a href="#contact">Contact</a>
             </div>
-            <button class="menu-toggle">☰</button>
         </nav>
     </header>
-
-    <main>
-        <section class="hero" id="home">
-            <div class="container">
-                <h1>Master Data Analysis with Personalized Learning</h1>
-                <p>From beginner to expert: Excel, MS SQL, Power BI, and Python</p>
-                <a href="register.html" class="btn">Start Your Journey</a>
-            </div>
-        </section>
-
-        <section class="features" id="features">
-            <div class="container">
-                <h2>Key Features</h2>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <h3>Personalized Assessment</h3>
-                        <p>Evaluate your current skills and start at the right level</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Customized Learning Path</h3>
-                        <p>Follow a tailored roadmap based on your assessment results</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Certification</h3>
-                        <p>Earn certificates for each completed tool and showcase your skills</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="learning-journey" id="courses">
-            <div class="container">
-                <h2>Your Learning Journey</h2>
-                <div class="journey-steps">
-                    <div class="journey-step">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <h3>Excel</h3>
-                            <p>Master Excel with our comprehensive course and hands-on projects</p>
-                        </div>
-                    </div>
-                    <div class="journey-step">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <h3>MS SQL</h3>
-                            <p>Master MS SQL with our comprehensive course and hands-on projects</p>
-                        </div>
-                    </div>
-                    <div class="journey-step">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <h3>Power BI</h3>
-                            <p>Master Power BI with our comprehensive course and hands-on projects</p>
-                        </div>
-                    </div>
-                    <div class="journey-step">
-                        <div class="step-number">4</div>
-                        <div class="step-content">
-                            <h3>Python</h3>
-                            <p>Master Python with our comprehensive course and hands-on projects</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="pricing" id="pricing">
-            <div class="container">
-                <h2>Pricing Plans</h2>
-                <div class="pricing-grid">
-                    <div class="pricing-card">
-                        <h3>Excel Mastery</h3>
-                        <div class="price">$299</div>
-                        <div class="price-details">
-                            <p>or $59/month for 6 months</p>
-                        </div>
-                        <ul>
-                            <li>Comprehensive Excel course</li>
-                            <li>Hands-on projects</li>
-                            <li>Personalized learning path</li>
-                            <li>Excel certification</li>
-                        </ul>
-                        <a href="#" class="btn">Enroll Now</a>
-                    </div>
-                    <div class="pricing-card">
-                        <h3>MS SQL Pro</h3>
-                        <div class="price">$399</div>
-                        <div class="price-details">
-                            <p>or $79/month for 6 months</p>
-                        </div>
-                        <ul>
-                            <li>In-depth MS SQL course</li>
-                            <li>Real-world database projects</li>
-                            <li>Customized learning experience</li>
-                            <li>MS SQL certification</li>
-                        </ul>
-                        <a href="#" class="btn">Enroll Now</a>
-                    </div>
-                    <div class="pricing-card">
-                        <h3>Power BI Visualizer</h3>
-                        <div class="price">$349</div>
-                        <div class="price-details">
-                            <p>or $69/month for 6 months</p>
-                        </div>
-                        <ul>
-                            <li>Comprehensive Power BI course</li>
-                            <li>Data visualization projects</li>
-                            <li>Adaptive learning path</li>
-                            <li>Power BI certification</li>
-                        </ul>
-                        <a href="#" class="btn">Enroll Now</a>
-                    </div>
-                    <div class="pricing-card">
-                        <h3>Python Data Scientist</h3>
-                        <div class="price">$499</div>
-                        <div class="price-details">
-                            <p>or $99/month for 6 months</p>
-                        </div>
-                        <ul>
-                            <li>Extensive Python for data science course</li>
-                            <li>Advanced data analysis projects</li>
-                            <li>Personalized curriculum</li>
-                            <li>Python Data Science certification</li>
-                        </ul>
-                        <a href="#" class="btn">Enroll Now</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="testimonials">
-            <div class="container">
-                <h2>What Our Students Say</h2>
-                <div class="testimonial-grid">
-                    <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
-                        <p>DataTutor helped me transition into a data analyst role. 
-                        The personalized learning path was incredibly effective!</p>
-                        <strong>Sarah L.</strong>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
-                        <p>I love how the platform adapts to my progress. The certifications have been a great addition to my resume.</p>
-                        <strong>James R.</strong>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
-                        <p>The structured approach to learning data analysis tools has been invaluable. I've seen a significant improvement in my skills!</p>
-                        <strong>Emily W.</strong>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
-                        <p>DataTutor's certification program gave me the confidence to apply for higher-level positions. It's been a game-changer for my career.</p>
-                        <strong>Jerry K.</strong>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="cta">
-            <div class="container">
-                <h2>Ready to Start Your Data Analysis Journey?</h2>
-                <p>Join thousands of successful students and boost your career today!</p>
-                <a href="register.html#" class="btn">Get Started Now</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
+    <section class="hero" id="home">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <h3>DataTutor</h3>
-                    <p>Empowering data analysts through personalized learning experiences.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#courses">Courses</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Support</h3>
-                    <ul>
-                        <li><a href="FAQs.html">FAQ</a></li>
-                        <li><a href="contact-us.html">Contact Us</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms-of-service.html">Terms of Service</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column" id="contact">
-                    <h3>Connect</h3>
-                    <ul>
-                        <li><a href="https://x.com/juderaji_">Twitter</a></li>
-                        <li><a href="https://linkedin.com/in/jude-raji">LinkedIn</a></li>
-                        <li><a href="https://www.github.com/juderaji">GitHub</a></li>
-                        <li><a href="https://juderaji.medium.com">Medium</a></li>
-                    </ul>
-                  </div>
+            <h1>Master Data Analysis with Personalized Learning</h1>
+            <p>From beginner to expert: Excel, MS SQL, Power BI, and Python</p>
+            <a href="register.html" class="btn-hero">Start Your Journey</a>
+        </div>
+    </section>
+    <div class="container">
+        <h2 class="pricing-header">Compare Our Pricing Plans</h2>
+        <div class="pricing-table">
+            <div class="plan">
+                <h3>Free Plan</h3>
+                <div class="price">$0.00</div>
+                <ul>
+                    <li>Access to basic courses</li>
+                    <li>Community support</li>
+                    <li>Limited course content</li>
+                    <li>Access to sample datasets</li>
+                    <li>Access to dashboard templates</li>
+                </ul>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 DataTutor. All rights reserved.</p>
+
+            <div class="plan">
+                <h3>Excel Plan</h3>
+                <div class="price">$50.00</div>
+                <ul>
+                    <li>In-depth Excel courses</li>
+                    <li>Hands-on exercises</li>
+                    <li>Access to community support</li>
+                    <li>Access to sample datasets</li>
+                    <li>Access to dashboard templates</li>
+                </ul>
+            </div>
+
+            <div class="plan">
+                <h3>SQL Plan</h3>
+                <div class="price">$75.00</div>
+                <ul>
+                    <li>Comprehensive SQL training</li>
+                    <li>Interactive queries and examples</li>
+                    <li>Access to community support</li>
+                    <li>Access to sample datasets</li>
+                    <li>Access to dashboard templates</li>
+                </ul>
+            </div>
+
+            <div class="plan">
+                <h3>Power BI Plan</h3>
+                <div class="price">$100.00</div>
+                <ul>
+                    <li>Power BI dashboard building</li>
+                    <li>Visualization techniques</li>
+                    <li>Access to community support</li>
+                    <li>Access to sample datasets</li>
+                    <li>Access to dashboard templates</li>
+                </ul>
+            </div>
+
+            <div class="plan">
+                <h3>Python Plan</h3>
+                <div class="price">$120.00</div>
+                <ul>
+                    <li>Python for data analysis</li>
+                    <li>Hands-on coding exercises</li>
+                    <li>Access to community support</li>
+                    <li>Access to sample datasets</li>
+                    <li>Access to dashboard templates</li>
+                </ul>
             </div>
         </div>
-    </footer>
-
-    <script>
-        // Simple toggle for mobile menu
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-links').style.display = 
-                document.querySelector('.nav-links').style.display === 'flex' ? 'none' : 'flex';
-        });
-    </script>
+        <div class="form-group" style="text-align: center; margin-top: 20px;">
+            <a href="register.html" class="btn">Register Now</a>
+        </div>
+    </div>
 </body>
 </html>
