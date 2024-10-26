@@ -169,7 +169,7 @@
         </nav>
     </header>
 
-    <main>
+    <main style="margin-top: 80px;">
         <section class="hero" id="home">
             <div class="container">
                 <h1>Master Data Analysis with Personalized Learning</h1>
@@ -202,8 +202,12 @@
     <script>
         // Simple toggle for mobile menu
         document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-links').style.display = 
-                document.querySelector('.nav-links').style.display === 'flex' ? 'none' : 'flex';
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+            }
         });
     </script>
 </body>
