@@ -14,7 +14,7 @@
             margin: 0;
         }
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             background: #ffffff;
             padding: 30px;
@@ -34,19 +34,32 @@
             flex: 1;
             border: 1px solid #e5e7eb;
             border-radius: 10px;
-            padding: 20px;
+            padding: 30px;
             background-color: #f9fafb;
+            text-align: center;
+            position: relative;
         }
         .plan h3 {
             color: #1e40af;
             margin-bottom: 20px;
         }
+        .plan .price {
+            font-size: 2rem;
+            color: #e11d48;
+            margin-bottom: 20px;
+        }
         .plan ul {
             list-style-type: none;
             padding-left: 0;
+            text-align: left;
+            margin-bottom: 30px;
         }
         .plan ul li {
             margin-bottom: 10px;
+        }
+        .plan .meetings {
+            font-weight: bold;
+            margin-bottom: 20px;
         }
         .btn {
             display: inline-block;
@@ -61,6 +74,13 @@
         .btn:hover {
             background-color: #1e3a8a;
         }
+        .plan.highlight {
+            background-color: #1e3a8a;
+            color: #fff;
+        }
+        .plan.highlight h3, .plan.highlight .price, .plan.highlight ul li {
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -68,40 +88,45 @@
         <h2 class="pricing-header">Compare Our Pricing Plans</h2>
         <div class="pricing-table">
             <div class="plan">
-                <h3>Free Plan</h3>
+                <h3>Walk</h3>
+                <div class="price">$1,495/month</div>
                 <ul>
-                    <li>Access to basic courses</li>
-                    <li>Community support</li>
-                    <li>Limited course content</li>
-                    <li>No certification</li>
-                    <li>Basic learning materials</li>
+                    <li>High-Level CRM Expertise</li>
+                    <li>Light User Support</li>
+                    <li>Basic Customization</li>
+                    <li>Monthly Check-In Meetings</li>
                 </ul>
-                <a href="register.html" class="btn">Join for Free</a>
+                <div class="meetings">1 Meeting / Month</div>
+                <a href="register.html" class="btn">Basic Package</a>
+            </div>
+
+            <div class="plan highlight">
+                <h3>Run</h3>
+                <div class="price">$2,495/month</div>
+                <ul>
+                    <li>High-Level CRM Expertise</li>
+                    <li>Medium User Support</li>
+                    <li>Advanced Customizations</li>
+                    <li>Bi-Weekly Check-In Meetings</li>
+                    <li>Proactive Approach and Analysis</li>
+                </ul>
+                <div class="meetings">2 Meetings / Month</div>
+                <a href="register.html" class="btn">Standard Package</a>
             </div>
 
             <div class="plan">
-                <h3>Pro Plan</h3>
+                <h3>Sprint</h3>
+                <div class="price">$4,495/month</div>
                 <ul>
-                    <li>Access to all courses</li>
-                    <li>Personalized learning path</li>
-                    <li>Weekly progress reports</li>
-                    <li>Certification upon course completion</li>
-                    <li>Access to advanced learning materials</li>
+                    <li>High-Level CRM Expertise</li>
+                    <li>Heavy User Support</li>
+                    <li>Advanced Customizations</li>
+                    <li>Weekly Check-In Meetings</li>
+                    <li>Proactive Approach & Analysis</li>
+                    <li>Career Guidance and Resume Review</li>
                 </ul>
-                <a href="register.html" class="btn">Subscribe to Pro</a>
-            </div>
-
-            <div class="plan">
-                <h3>Premium Plan</h3>
-                <ul>
-                    <li>All Pro Plan features</li>
-                    <li>1-on-1 mentorship sessions</li>
-                    <li>Certification for all completed courses</li>
-                    <li>Priority support</li>
-                    <li>Exclusive webinars and workshops</li>
-                    <li>Career guidance and resume review</li>
-                </ul>
-                <a href="register.html" class="btn">Go Premium</a>
+                <div class="meetings">4 Meetings / Month</div>
+                <a href="register.html" class="btn">Premium Package</a>
             </div>
         </div>
     </div>
